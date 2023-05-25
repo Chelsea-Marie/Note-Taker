@@ -1,35 +1,7 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "asdasdae",
-        "text": "asdasdat"
-    },
-    {
-        "title": "Test Title",
-        "text": "Test Content asdasdas "
-    },
-    {
-        "title": "asdas",
-        "text": "sdasd"
-    },
-    {
-        "title": "Hello",
-        "text": "hello\n"
-    },
-    {
+        "id": 0.39646879037560057,
         "title": "Groceries",
-        "text": "Avocados"
-    },
-    {
-        "title": "Target",
-        "text": "bananas"
-    },
-    {
-        "id": 0.40794961718860456,
-        "title": "hello",
-        "text": "hello"
+        "text": "apples, bananas, grapes"
     }
 ]
