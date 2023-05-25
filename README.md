@@ -6,6 +6,7 @@ The note taker application allows you to add notes with a title and content to a
 
 <img width="287" alt="Screenshot 2023-05-24 205929" src="https://github.com/Chelsea-Marie/Note-Taker/assets/116038369/3225e540-f358-4b92-b5f6-add7835d7d95">
 
+<br>
 
 <img width="418" alt="Screenshot 2023-05-24 205943" src="https://github.com/Chelsea-Marie/Note-Taker/assets/116038369/8bcb5e08-e858-42a5-b23a-6f413e3dabd9">
 
