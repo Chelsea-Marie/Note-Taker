@@ -6,9 +6,11 @@ const fs = require("fs");
 
 const app = express();
 
+const PORT = process.env.PORT || 3001;
+
 // middlewares
 app.use(express.static("public"))
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 // routes
@@ -16,7 +18,7 @@ app.use(express.json())
 app.get("/notes", (req, res) => {
     // res.send("hi!")
     res.sendFile(path.join(__dirname, "./public/notes.html"))
-//  C:\Users\chels\bootcamp\modules\note-taker\Note-Taker\Develop\public\notes.html
+    //  C:\Users\chels\bootcamp\modules\note-taker\Note-Taker\Develop\public\notes.html
 })
 
 app.get("/api/notes", (req, res) => {
@@ -28,7 +30,7 @@ app.get("*", (req, res) => {
 })
 
 app.post("/api/notes", (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
 
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         // console.log(data)
@@ -36,7 +38,7 @@ app.post("/api/notes", (req, res) => {
         // console.log(notes)
 
         notes.push({
-            // id: asdasdasda,
+            id: Math.random(),
             title: req.body.title,
             text: req.body.text
         })
@@ -46,11 +48,13 @@ app.post("/api/notes", (req, res) => {
         fs.writeFile("./db/db.json", JSON.stringify(notes, null, 4), (err, data) => {
             console.log("Note has been added!")
 
-            res.json({message: "Note has been added!"})
+            res.json({ message: "Note has been added!" })
         })
     })
 })
 
 
 
-app.listen(3001)
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT + "!");
+});
